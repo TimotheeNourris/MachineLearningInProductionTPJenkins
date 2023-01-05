@@ -1,19 +1,19 @@
 pipeline {
     agent any 
     stages {
-        stage('Building') {
+        stage('Build part') {
             steps {
                 bat 'echo "build start"'
                 bat 'echo "$HOME%"'
                 bat 'pip install -r requirements.txt'
             }
         }
-        stage('Testing') {
+        stage('Test part') {
             steps {       
                 bat 'python -m unittest'
             }
         }
-        stage('Deploying') {
+        stage('Deploy part') {
             steps {
                 bat 'docker build -t JenkinsDocker .'
                 bat 'docker run -d -p 5000:5000 JenkinsDocker'
