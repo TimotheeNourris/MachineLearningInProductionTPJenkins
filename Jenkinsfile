@@ -3,6 +3,7 @@ pipeline {
     stages {
         stage('Building') {
             steps {
+                sh 'python --version'
                 bat 'pip install -r requirements.txt'
             }
         }
