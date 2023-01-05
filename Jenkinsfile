@@ -4,6 +4,7 @@ pipeline {
         stage('Building') {
             steps {
                 bat 'echo "build start"'
+                bat 'echo "%HOME%"'
                 bat 'pip install -r requirements.txt'
             }
         }
