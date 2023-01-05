@@ -3,8 +3,9 @@ pipeline {
     stages {
         stage('Building') {
             steps {
-                sh 'echo "build start"'
-                sh 'pip install -r requirements.txt'
+                bat 'echo "build start"'
+                bat 'pip'
+                //bat 'pip install -r requirements.txt'
             }
         }
         stage('Testing') {
