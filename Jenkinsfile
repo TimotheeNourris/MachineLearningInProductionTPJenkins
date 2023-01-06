@@ -4,7 +4,7 @@ pipeline {
         stage('Build part') {
             steps {
                 docker {
-                    image 'Dockerimage'
+                    image 'Dockerfile'
                     // Run the container on the node specified at the
                     // top-level of the Pipeline, in the same workspace,
                     // rather than on a new node entirely:
