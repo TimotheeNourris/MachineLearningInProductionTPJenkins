@@ -1,5 +1,4 @@
 # Dockerfile to build a flask app
-# Dockerfile to build a flask app
 FROM python:3.10.0
 
 WORKDIR /app
