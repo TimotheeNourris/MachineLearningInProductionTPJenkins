@@ -3,6 +3,13 @@ pipeline {
     stages {
         stage('Build part') {
             steps {
+                docker {
+                    image 'Dockerimage'
+                    // Run the container on the node specified at the
+                    // top-level of the Pipeline, in the same workspace,
+                    // rather than on a new node entirely:
+                    reuseNode true
+                }
                 bat 'echo "build start"'
                 bat 'echo "$HOME%"'
                 bat 'pip install -r requirements.txt'
