@@ -11,7 +11,7 @@ pipeline {
         }
         stage('Test part') {
             steps {       
-                
+                bat 'echo "test start"'
             }
         }
         stage('Deploy part') {
