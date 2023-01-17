@@ -10,8 +10,8 @@ pipeline {
         }
         stage('Deploy part') {
             steps {
-                bat 'docker build -t Jenkinsdocker .'
-                bat 'docker run -d -p 5000:5000 Jenkinsdocker'
+                bat 'docker build -t jenkinsdocker .'
+                bat 'docker run -d -p 5000:5000 jenkinsdocker'
             }
         }
         stage('Test part') {
