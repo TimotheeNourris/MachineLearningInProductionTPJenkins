@@ -6,11 +6,12 @@ pipeline {
                 bat 'echo "build start"'
                 bat 'echo "$HOME%"'
                 bat 'pip install -r requirements.txt'
+                bat 'python -m unittest'
             }
         }
         stage('Test part') {
             steps {       
-                python -m unittest
+                
             }
         }
         stage('Deploy part') {
