@@ -8,18 +8,19 @@ pipeline {
                 bat 'pip install -r requirements.txt'
             }
         }
-        stage('Test part') {
-            steps {       
-                bat 'echo "test start"'
-                bat 'python -m unittest'
-            }
-        }
         stage('Deploy part') {
             steps {
                 bat 'docker build -t JenkinsDocker .'
                 bat 'docker run -d -p 5000:5000 JenkinsDocker'
             }
         }
+        stage('Test part') {
+            steps {       
+                bat 'echo "test start"'
+                bat 'python -m unittest'
+            }
+        }
+       
     }
     triggers {
         githubPush()
