@@ -8,13 +8,6 @@ simple python flask application
 ##########################################################################
 
 import os
-import ast
-import numpy as np
-import pandas as pd
-import tensorflow as tf
-from tensorflow import keras
-#from tensorflow.keras.datasets import fashion_mnist 
-
 from flask import Flask
 from flask import request
 from flask import render_template
@@ -27,9 +20,6 @@ from flask.json import jsonify
 
 app = Flask(__name__)
 
-#let's import the model
-#model = tf.keras.models.load_model("Nourris_Timothee_model_train.h5")
-#class_labels = ['t-shirt', 'trouser', 'pullover', 'dress', 'coat', 'sandal', 'shirt', 'sneaker', 'bag', 'ankle boot']
 ##########################################################################
 ## Routes
 ##########################################################################
