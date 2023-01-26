@@ -10,9 +10,9 @@ simple python flask application
 import os
 
 import ast
-import numpy as np
-import tensorflow as tf
-from tensorflow import keras
+#import numpy as np
+#import tensorflow as tf
+#from tensorflow import keras
 
 from flask import Flask
 from flask import request
