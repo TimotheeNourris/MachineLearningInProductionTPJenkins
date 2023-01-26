@@ -6,6 +6,7 @@ pipeline {
                 bat 'echo "build start"'
                 bat 'echo "$HOME%"'
                 bat 'pip3 install -r requirements.txt'
+                bar 'python --version'
             }
         }
 
