@@ -30,6 +30,22 @@ app = Flask(__name__)
 ##########################################################################
 ## Routes
 ##########################################################################
+@app.route("/classify/<path:array>", methods=['GET', 'POST'])
+def classify(array):
+    
+    image = ast.literal_eval(array)
+
+    # preprocess the image
+    image = np.array(image, dtype=np.float32)
+    image = image.reshape(1, 28, 28, 1)
+    image = image.astype("float32")
+    image /= 255
+
+    # make the prediction
+    prediction = model.predict(image)
+    label = int(np.argmax(prediction))
+    return jsonify({"prediction": label, 'label': class_labels[label]})
+
 
 @app.route("/")
 def home():
