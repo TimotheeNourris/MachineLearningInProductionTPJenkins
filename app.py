@@ -12,8 +12,8 @@ import os
 import ast
 import numpy as np
 import pandas as pd
-import tensorflow as tf
-from tensorflow import keras
+#import tensorflow as tf
+#from tensorflow import keras
 
 from flask import Flask
 from flask import request
