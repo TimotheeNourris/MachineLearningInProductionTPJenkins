@@ -5,14 +5,14 @@ pipeline {
             steps {
                 bat 'echo "build start"'
                 bat 'echo "$HOME%"'
-                bat 'pip install -r requirements.txt'
+                bat 'pip3 install -r requirements.txt'
             }
         }
 
         stage('Test part') {
             steps {       
                 bat 'echo "test start"'
-                bat 'python -m unittest'
+                bat 'python3 -m unittest'
             }
         }
         
