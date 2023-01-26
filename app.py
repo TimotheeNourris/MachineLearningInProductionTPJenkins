@@ -28,7 +28,7 @@ from flask.json import jsonify
 app = Flask(__name__)
 
 #let's import the model
-model = tf.keras.models.load_model("Nourris_Timothee_model_train.h5")
+#model = tf.keras.models.load_model("Nourris_Timothee_model_train.h5")
 class_labels = ['t-shirt', 'trouser', 'pullover', 'dress', 'coat', 'sandal', 'shirt', 'sneaker', 'bag', 'ankle boot']
 ##########################################################################
 ## Routes
