@@ -33,7 +33,7 @@ class_labels = ['t-shirt', 'trouser', 'pullover', 'dress', 'coat', 'sandal', 'sh
 ##########################################################################
 ## Routes
 ##########################################################################
-
+'''
 @app.route("/classify/<path:array>", methods=['GET', 'POST'])
 def classify(array):
     
@@ -49,7 +49,7 @@ def classify(array):
     prediction = model.predict(image)
     label = int(np.argmax(prediction))
     return jsonify({"prediction": label, 'label': class_labels[label]})
-
+'''
 @app.route("/")
 def home():
     return render_template("home.html")
